@@ -1,0 +1,22 @@
+h2{
+    color: rgb(0, 56, 121);
+}
+
+h1{
+    color: rgba(0, 68, 255, 0.404);
+}
+.Encabezado{
+    
+    background-color: rgb(179, 212, 255);
+    
+}
+
+.Logo img{
+    width: 100px;
+   
+}
+
+.RedesSociales img{
+    width: 30px;
+    
+}

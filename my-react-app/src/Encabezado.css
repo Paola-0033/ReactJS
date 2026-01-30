@@ -7,16 +7,67 @@ h1{
 }
 .Encabezado{
     
-    background-color: rgb(179, 212, 255);
+    background-color: rgb(81, 159, 231);
+    width: 100%;
+    display: flex;
     
 }
 
-.Logo img{
-    width: 100px;
+.LogoDiv img{
+    width: 20%;
+    background-color: rgb(81, 159, 231);
+    justify-content: center;
+    align-items: center;
+    display: flex;
    
 }
 
-.RedesSociales img{
-    width: 30px;
+.LogoDiv img {
+    width: 200px;
+}
+
+.menuDiv {
+    width: 60%;
+    background-color: rgb(81, 159, 231);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.menuDiv ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: rgb(58, 83, 192);
+    padding: 10px;
+    justify-content: center;
+    color: white;
+}
+.menuDiv ul li a{
+    text-decoration: none;
+    color: white;
+}
+.menuDiv ul li a:hover{
+    background-color: rgb(81, 159, 231);
+    padding: 20px;
+}
+
+.RedesDiv{
+    width: 20%;
     
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+.RedesDiv ul{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+
+}
+.RedesDiv img{
+    width: 30px;
 }

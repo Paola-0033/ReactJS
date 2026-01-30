@@ -1,3 +1,4 @@
+import ContenedorTarjeta from "./ContenedorTarjeta";
 import Encabezado from "./Encabezado";
 
 function App(){
@@ -5,6 +6,7 @@ function App(){
   return(
   <div>
     <Encabezado/>
+    <ContenedorTarjeta/>
     <h1>5A EVND</h1>
     <h3>Alumna: </h3>
     <h3>Paola Rodriguez Hernandez</h3>

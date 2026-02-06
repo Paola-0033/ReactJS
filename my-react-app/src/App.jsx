@@ -1,5 +1,7 @@
 import ContenedorTarjeta from "./ContenedorTarjeta";
 import Encabezado from "./Encabezado";
+import PieComponente from "./PieComponente";
+import PromosContenido from "./PromosContenidos";
 
 function App(){
  
@@ -7,10 +9,11 @@ function App(){
   <div>
     <Encabezado/>
     <ContenedorTarjeta/>
-    <h1>5A EVND</h1>
-    <h3>Alumna: </h3>
+    <PromosContenido/>
+    <PieComponente/>
+   
     <h3>Paola Rodriguez Hernandez</h3>
-    <h4>UTXJ</h4>
+    
   
     <UserComponent/>
     <ProfileComponent/>

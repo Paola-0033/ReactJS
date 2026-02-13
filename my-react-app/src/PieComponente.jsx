@@ -1,15 +1,16 @@
-import './PromosContenidos';
-function PieComponente(){
-    return(
-        <div className="pieDiv">
-            <div className ="pieInzDiv">
-                <p>2026 Aplicacion react.Todos los Derechos reservados</p>
-            </div>
-            <div className ="piederDiv">
-                <p> Paola Rodriguez Hernandez </p>
-            </div>
+import Mapa from './Mapa';
+import './PromosContenido.css';
 
-        </div>
-    )
+function PromosContenido() {
+  return (
+    <div className="promosContenido">
+      <h2>Promociones</h2>
+      <p>Contenido de promociones aquÃ­</p>
+      <Mapa lat={20.276247346277895} 
+      lng={-97.95828426659142} 
+      nombre_sucursal={'Sucursal Centro'} />
+    </div>
+  );
 }
-export default PieComponente;
+
+export default PromosContenido;

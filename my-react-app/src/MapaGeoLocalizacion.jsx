@@ -1,38 +1,39 @@
-import { GoogleMap, LoadScript, Marker}from '@react-google-maps/api';
-import { defaultFieldResolver } from 'graphql';
+import { useEffect, useState } from 'react';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
+
 const containerStyle = {
     width: '100%',
-    height: '360px'
+    height: '350px'
 };
-function MapaGeoLocalizacion (){
-    const [ ubicacion, setUbicacion ]= useState(null);
-    useEfect(()=>{
-        navigator.geolocation.getCurrentPosition(
-            (position)=>{
-               setUbicacion({
-                 lat: position.coords.latitude,
-                 ing: position.coords.longitude
-                })
 
+function MapaGeolocalizacion(){
+    const [ubicacion, setUbicacion] = useState(null);
+    useEffect(()=>{
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                setUbicacion({
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude
+                })
             },
             (error)=> console.error(error),
             {enableHighAccuracy:true}
-        
-        )   
+        )
     },[])
-     return(
-        <LoadScript GoogleMapsApikey={import.meta.env.VITE.GOOGLE_MAPS_API_KEY}>
+
+    return(
+        <LoadScript googleMapsApiKey={import.meta.env.VITE_GOOGLE_MAPS_API_KEY}>
             {
-                ubicacion&& (
+                ubicacion && (
                     <GoogleMap
-                    mapaContainerStyle={containerStyle}
+                    mapContainerStyle={containerStyle}
                     center={ubicacion}
                     zoom={15}>
-                        <marker position={ubicacion}/>
+                        <Marker position={ubicacion}/>
                     </GoogleMap>
                 )
             }
         </LoadScript>
-     )
+    )
 }
  export default MapaGeoLocalizacion;

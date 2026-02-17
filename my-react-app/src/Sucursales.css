@@ -1,0 +1,26 @@
+.sucursales {
+  padding: 40px;
+}
+.sucursales h2::after {
+  content: '';
+  display: block;
+  width: 68px;
+  height: 3px;
+
+}
+
+.lista-sucursales {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 20px;
+ 
+}
+
+.sucursal {
+  width: 250px;
+}
+
+.sucursal img {
+  width: 100%;
+  border-radius: 6px;
+}

@@ -1,5 +1,6 @@
 import MapaGeoLocalizacion from './MapaGeoLocalizacion';
 import './PromosContenido.css';
+
 function PromosContenido(){
     return(
         <div className='promosContenido'> 

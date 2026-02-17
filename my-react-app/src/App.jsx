@@ -3,7 +3,7 @@ import ContenedorTarjeta from "./ContenedorTarjeta";
 import Encabezado from "./Encabezado";
 import PieComponente from "./PieComponente";
 import PromosContenido from "./PromosContenidos";
-import { useState } from "react";
+
 
 function App(){
   const [vista, setVista] = useState("Inicio");
@@ -21,8 +21,6 @@ function App(){
    
 }
 
-App.propTypes = {
-  vista: PropTypes.string.isRequired
-};
+
 
 export default App;

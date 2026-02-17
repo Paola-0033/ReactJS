@@ -36,4 +36,4 @@ function MapaGeolocalizacion(){
         </LoadScript>
     )
 }
- export default MapaGeoLocalizacion;
+ export default MapaGeolocalizacion;

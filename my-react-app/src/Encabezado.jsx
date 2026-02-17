@@ -5,6 +5,7 @@ import Whatsapp from './assets/whatsapp.jpg';
 import youtube from './assets/youtube.png';
 import PropTypes from 'prop-types';
 import './Encabezado.css';
+import Clima from './Clima';
 
 
 function Encabezado({cambiarVista}) {
@@ -13,6 +14,7 @@ function Encabezado({cambiarVista}) {
             <Logo/>
             <Menu cambiarVista={cambiarVista} />
             <RedesSociales/>
+            
     
 
         </div> 
@@ -40,6 +42,7 @@ function Menu({cambiarVista}){
                 <li onClick={() => cambiarVista("Contacto")}>Contacto</li>
                 
             </ul>
+            <Clima/>
         </div>
     );
 }

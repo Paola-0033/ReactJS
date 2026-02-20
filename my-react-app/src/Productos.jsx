@@ -1,36 +1,47 @@
+import { useEffect, useState } from 'react';  
+import api from './Services/api';
 import './Productos.css';
+import { formToJSON } from 'axios';
 
 function Productos() {
+  const [productos, setProductos]= useState([]);
+  const[cargando,setCargando] = useState(true);
+
+  useEffect(()=>{
+    const obtenerProductos = async ()=> {
+      try{
+        const response = await api.get('/products');
+        setProductos(response.data);
+      }catch(error){
+         console.error('error al obtener productos:',error);
+      } finally{
+        setCargando(false);
+      }
+         
+
+    };
+    obtenerProductos();
+    
+    
+  },[]);
+
+ if(cargando)return<p>Cargando productos...</p>
   return (
-    <section className="productos">
+    <div className="productos">
       <h2>Nuestros Productos</h2>
+      {productos.map((producto)=>(
+        <div key={producto.id}>
+          <p>{producto.title}</p> 
+          <p>{producto.prince}</p>
+          <img src={producto.image}/>
 
-      <div className="grid-productos">
-        <div className="card-producto">
-          <img src="https://i.pinimg.com/1200x/ae/ab/f3/aeabf3db3cae2d105785a1c3473fedd8.jpg" />
-          <h3>BMW Carro </h3>
-          <p>Modelo i5 Bmw.</p>
-          <span>$299,000,00 MXN</span>
-          <button>Comprar</button>
         </div>
+        //card terminan aqui
+        
+      ))}
 
-        <div className="card-producto">
-          <img src="https://mx.pinterest.com/pin/76068681202291129/" />
-          <h3> BMW Camioneta</h3>
-          <p>XM Modelo M </p>
-          <span>$499,000,00 MXN</span>
-          <button>Comprar</button>
-        </div>
-
-        <div className="card-producto">
-          <img src="https://i.pinimg.com/1200x/47/fe/31/47fe31fda7001458b3ea410fcf2506c5.jpg" />
-          <h3>BMW Camioneta</h3>
-          <p>X5 Modelo M</p>
-          <span>$599,000,00 MXN</span>
-          <button>Comprar</button>
-        </div>
       </div>
-    </section>
+
   );
 }
 

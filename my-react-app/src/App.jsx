@@ -16,7 +16,7 @@ function App(){
         <Encabezado cambiarVista={setVista}/>
         <ContenedorTarjeta vista={vista}/>
         
-        {esInicio && <PromosContenido/>}
+        <PromosContenido/>
 
         <PieComponente/>
       </div>

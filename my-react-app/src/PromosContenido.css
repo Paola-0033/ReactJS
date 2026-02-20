@@ -20,4 +20,13 @@
     font-family: Arial, sans-serif;
     padding: 10px;
 }
+.promosContenido {
+  width: 100%;
+  padding: 20px;
+}
 
+.mapa-container {
+  width: 100%;
+  height: 350px;
+  margin-top: 20px;
+}

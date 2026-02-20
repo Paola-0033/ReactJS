@@ -11,7 +11,7 @@ import Galeria from './Galeria';
 function ContenedorTarjeta({vista}) {
     const vistas = {
         "Inicio": <Inicio/>,
-        "Acerca de": <AcercaDe/>
+        "Acerca de": <AcercaDe/>,
         "Productos": <Productos/>,
         "Contacto": <Contacto/>,
         "Sucursales": <Sucursales/>,

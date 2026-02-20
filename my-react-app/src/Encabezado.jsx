@@ -42,7 +42,7 @@ function Menu({cambiarVista}){
                 <li onClick={() => cambiarVista("Contacto")}>Contacto</li>
                 
             </ul>
-            <Clima/>
+           
         </div>
     );
 }
@@ -58,6 +58,7 @@ function RedesSociales(){
             <li><a href="#"><img src={youtube} alt="youtube" /></a></li>
 
             </ul>
+             <Clima/>
         </div>
     );
 

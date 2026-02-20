@@ -72,11 +72,17 @@ h1{
 
 .RedesDiv{
     width: 20%;
-    
     justify-content: center;
     align-items: center;
     display: flex;
-    
+    flex-direction: column; /* 👈 esto */
+    gap: 8px; /* espacio entre iconos y clima */
+}
+.RedesDiv p, 
+.RedesDiv div {
+    color: white;
+    text-align: center;
+    font-size: 14px;
 }
 .RedesDiv ul{
     list-style: none;

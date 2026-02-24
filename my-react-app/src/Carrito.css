@@ -9,15 +9,15 @@
   margin-bottom: 30px;
 }
 
-/* 🔥 CONTENEDOR HORIZONTAL */
+
 .cards {
   display: flex;
-  flex-direction: row;        /* horizontal */
-  gap: 20px;                  /* espacio entre cards */
-  flex-wrap: wrap;            /* que bajen si no caben */
+  flex-direction: row;        
+  gap: 20px;                  
+  flex-wrap: wrap;            
 }
 
-/* CARD */
+
 .card {
   width: 300px;
   background: white;

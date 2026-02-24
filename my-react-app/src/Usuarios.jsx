@@ -15,7 +15,7 @@ function Usuarios() {
   });
   const [editando, setEditando] = useState(null);
 
-  // Cargar usuarios del localStorage o desde la API pública si está vacío
+  
   useEffect(() => {
     const cargarInicial = async () => {
       const usuariosGuardados = localStorage.getItem('usuarios');
@@ -24,7 +24,7 @@ function Usuarios() {
         return;
       }
 
-      // Si no hay usuarios en localStorage, intentar importar desde fakestoreapi
+      
       try {
         const res = await fetch('https://fakestoreapi.com/users');
         if (!res.ok) throw new Error('Error al obtener usuarios');
@@ -50,14 +50,14 @@ function Usuarios() {
     cargarInicial();
   }, []);
 
-  // Guardar usuarios en localStorage
+
   const guardarUsuarios = (listaUsuarios) => {
     localStorage.setItem('usuarios', JSON.stringify(listaUsuarios));
     setUsuarios(listaUsuarios);
     console.log('Usuarios guardados:', listaUsuarios.length);
   };
 
-  // Importar usuarios desde la API pública y mezclar sin duplicados (por username)
+  
   const importarUsuariosApi = async () => {
     try {
       const res = await fetch('https://fakestoreapi.com/users');

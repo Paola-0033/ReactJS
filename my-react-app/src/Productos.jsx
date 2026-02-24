@@ -29,19 +29,18 @@ function Productos() {
   return (
     <div className="productos">
       <h2>Nuestros Productos</h2>
-      {productos.map((producto)=>(
-        <div key={producto.id}>
-          <p>{producto.title}</p> 
-          <p>{producto.prince}</p>
-          <img src={producto.image}/>
-
-        </div>
-        //card terminan aqui
-        
-      ))}
-
+      <div className="grid-productos">
+        {productos.map((producto)=>(
+          <div key={producto.id} className="card-producto">
+            <img src={producto.image} alt={producto.title}/>
+            <h3>{producto.title}</h3> 
+            <p>{producto.description}</p>
+            <span>${producto.prince}</span>
+            <button>Agregar al carrito</button>
+          </div>
+        ))}
       </div>
-
+    </div>
   );
 }
 

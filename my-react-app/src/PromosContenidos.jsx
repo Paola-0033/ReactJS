@@ -3,7 +3,7 @@ import './PromosContenido.css';
 
 function PromosContenido(){
   return(
-    <div className='promosContenido'> 
+    <div className='promosContenido hero'> 
       <h2>Promociones</h2>
       <p>Estas son las mejores promociones y descuentos en autos y camionetas 2026 aprovecha</p>
 

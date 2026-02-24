@@ -1,12 +1,21 @@
 .promosContenido{
-    background-image: url('./assets/bmw fondooo.jpg');
-    background-repeat: no repeat;
-    background-size: cover;
-    background-position: center;
-    width: 90%;
-    margin: auto;
-    min-height: 200px;
+  /* base styles for promotions block (no background image here) */
+  width: 100%;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
 
+/* hero variant: big promotional banner with background image */
+.promosContenido.hero {
+  background-image: url('./assets/bmw fondooo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 90%;
+  margin: 20px auto;
+  min-height: 240px;
+  border-radius: 10px;
+  padding: 28px;
 }
 .promosContenido h2{
     color: aliceblue;
@@ -20,13 +29,24 @@
     font-family: Arial, sans-serif;
     padding: 10px;
 }
-.promosContenido {
-  width: 100%;
-  padding: 20px;
-}
-
 .mapa-container {
   width: 100%;
   height: 350px;
   margin-top: 20px;
+}
+/* ensure the map inside hero scales correctly */
+.promosContenido .mapa-container { max-width: 100%; height: 350px; }
+
+.mapa-contenedor, .mapa-container {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.mapa-estado {
+  padding: 18px;
+  background: white;
+  border-radius: 8px;
+  color: #333;
 }

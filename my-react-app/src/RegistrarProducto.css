@@ -1,0 +1,80 @@
+.registro-form {
+  background: #ffffff;
+  padding: 24px 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin: 0 auto 40px;
+  font-family: inherit;
+}
+
+.registro-form h1 {
+  font-size: 24px;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.registro-form label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 6px;
+  margin-top: 12px;
+}
+
+.registro-form input[type="text"],
+.registro-form input[type="number"],
+.registro-form textarea,
+.registro-form input[type="file"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.registro-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.registro-form button {
+  margin-top: 20px;
+  background: linear-gradient(135deg, #446cc4 0%, #446cc4 0%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  width: 100%;
+}
+
+.registro-form button:hover {
+  background: linear-gradient(135deg, #000000 0%, #000000 100%);
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+}
+
+@media (max-width: 768px) {
+  .registro-form {
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .registro-form h1 {
+    font-size: 20px;
+  }
+
+  .registro-form button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

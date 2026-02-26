@@ -1,26 +1,151 @@
 .sucursales {
   padding: 40px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #ffffff 100%);
+  min-height: 100vh;
 }
+
+.sucursales h2 {
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
 .sucursales h2::after {
   content: '';
   display: block;
-  width: 68px;
-  height: 3px;
-
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, #003da5 0%, #1e40af 100%);
+  margin: 15px 0 30px 0;
+  border-radius: 2px;
 }
 
 .lista-sucursales {
   display: grid;
-  grid-template-columns: repeat(2, minmax(280px, 1fr));
-  gap: 20px;
- 
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  margin-bottom: 60px;
 }
 
 .sucursal {
-  width: 250px;
+  width: 100%;
+}
+
+.sucursal-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.sucursal-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 61, 165, 0.15);
 }
 
 .sucursal img {
   width: 100%;
-  border-radius: 6px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.sucursal-info {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sucursal-info h3 {
+  font-size: 1.5rem;
+  color: #003da5;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.sucursal-info p {
+  margin: 10px 0;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.direccion,
+.telefono {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.direccion strong,
+.telefono strong {
+  color: #003da5;
+  min-width: 30px;
+  font-size: 1.1rem;
+}
+
+.btn-contactar {
+  background: linear-gradient(135deg, #003da5 0%, #1e40af 100%);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.btn-contactar:hover {
+  background: linear-gradient(135deg, #002d7a 0%, #1a3382 100%);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 61, 165, 0.3);
+}
+
+.mapa-sucursales {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  margin-top: 40px;
+}
+
+.mapa-sucursales h2 {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .sucursales {
+    padding: 20px;
+  }
+
+  .sucursales h2 {
+    font-size: 1.8rem;
+  }
+
+  .lista-sucursales {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .sucursal-info {
+    padding: 20px;
+  }
+
+  .mapa-sucursales {
+    padding: 20px;
+  }
 }

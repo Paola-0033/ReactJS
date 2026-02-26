@@ -84,7 +84,7 @@
 }
 
 .card-producto button {
-  background: linear-gradient(135deg, #ff6b35 0%, #f85e2a 100%);
+  background: linear-gradient(135deg, #3574bd 0%, #3574bd 0%);
   color: white;
   border: none;
   padding: 12px 20px;
@@ -95,6 +95,7 @@
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  flex: 1 1 0;
 }
 
 .card-producto button:hover {
@@ -107,7 +108,38 @@
   transform: scale(0.98);
 }
 
-/* Responsive Design */
+/*  tarjeta*/
+.card-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+/* botón eliminar*/
+.btn-eliminar {
+  background: #d32f2f;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex: 1 1 0;
+}
+
+.btn-eliminar:hover {
+  background: #b71c1c;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
+}
+
+
 @media (max-width: 1024px) {
   .grid-productos {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

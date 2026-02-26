@@ -1,7 +1,8 @@
-import { useEffect, useState } from 'react';  
+import { useEffect, useState } from 'react';
 import api from './Services/api';
 import './Productos.css';
 import { formToJSON } from 'axios';
+import Registrarroducto from './resgistrarProducto';
 
 function Productos() {
   const [productos, setProductos]= useState([]);
@@ -28,6 +29,9 @@ function Productos() {
  if(cargando)return<p>Cargando productos...</p>
   return (
     <div className="productos">
+      {/* formulario para registrar nuevos productos */}
+      <Registrarroducto />
+   
       <h2>Nuestros Productos</h2>
       <div className="grid-productos">
         {productos.map((producto)=>(
@@ -36,7 +40,18 @@ function Productos() {
             <h3>{producto.title}</h3> 
             <p>{producto.description}</p>
             <span>${producto.prince}</span>
-            <button>Agregar al carrito</button>
+            <div className="card-actions">
+              <button className="btn-agregar">Agregar al carrito</button>
+              <button
+                className="btn-eliminar"
+                onClick={() => {
+                  // eliminar producto de la lista local
+                  setProductos((prev) => prev.filter((p) => p.id !== producto.id));
+                }}
+              >
+                Eliminar
+              </button>
+            </div>
           </div>
         ))}
       </div>

@@ -1,16 +1,17 @@
-import Mapa from './Mapa';
-import './PromosContenido.css';
+import './PieComponente.css';
 
-function PromosContenido() {
+function PieComponente() {
+  // componente de pie de página sencillo con nombre y marca registrada
   return (
-    <div className="promosContenido">
-      <h2>Promociones</h2>
-      <p>Contenido de promociones aquÃ­</p>
-      <Mapa lat={20.276247346277895} 
-      lng={-97.95828426659142} 
-      nombre_sucursal={'Sucursal Centro'} />
-    </div>
+    <footer className="pieDiv">
+      <div className="pieIzqDiv">
+        © {new Date().getFullYear()} Paola Rodriguez Hernandez
+      </div>
+      <div className="piederDiv">
+        Marca registrada
+      </div>
+    </footer>
   );
 }
 
-export default PromosContenido;
+export default PieComponente;

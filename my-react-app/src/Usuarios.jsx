@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import './Usuarios.css';
+import FormularioUsuario from './FormularioUsuario';
 
 function Usuarios() {
   const [usuarios, setUsuarios] = useState([]);
@@ -34,7 +35,6 @@ function Usuarios() {
           id: u.id || Date.now() + Math.random(),
           nombre: u.name?.firstname || '',
           apellidos: u.name?.lastname || '',
-          direccion: `${u.address?.street || ''} ${u.address?.number || ''} ${u.address?.city || ''} ${u.address?.zipcode || ''}`.trim(),
           telefono: u.phone || '',
           correo: u.email || '',
           username: u.username || '',
@@ -173,74 +173,13 @@ function Usuarios() {
       </div>
 
       {formularioVisible && (
-        <form className="formulario-usuario" onSubmit={manejarSubmit}>
-          <div className="formulario-grid">
-            <input
-              type="text"
-              name="nombre"
-              placeholder="Nombre"
-              value={formData.nombre}
-              onChange={manejarCambio}
-              required
-            />
-            <input
-              type="text"
-              name="apellidos"
-              placeholder="Apellidos"
-              value={formData.apellidos}
-              onChange={manejarCambio}
-              required
-            />
-            <input
-              type="text"
-              name="direccion"
-              placeholder="Dirección"
-              value={formData.direccion}
-              onChange={manejarCambio}
-              required
-            />
-            <input
-              type="tel"
-              name="telefono"
-              placeholder="Teléfono"
-              value={formData.telefono}
-              onChange={manejarCambio}
-              required
-            />
-            <input
-              type="email"
-              name="correo"
-              placeholder="Correo"
-              value={formData.correo}
-              onChange={manejarCambio}
-              required
-            />
-            <input
-              type="text"
-              name="username"
-              placeholder="Username"
-              value={formData.username}
-              onChange={manejarCambio}
-              required
-            />
-            <input
-              type="password"
-              name="password"
-              placeholder="Password"
-              value={formData.password}
-              onChange={manejarCambio}
-              required
-            />
-          </div>
-          <div className="botones-formulario">
-            <button type="submit" className="btn-guardar">
-              {editando !== null ? 'Actualizar' : 'Guardar'}
-            </button>
-            <button type="button" className="btn-cancelar" onClick={manejarCancelar}>
-              Cancelar
-            </button>
-          </div>
-        </form>
+        <FormularioUsuario 
+          formData={formData}
+          manejarCambio={manejarCambio}
+          manejarSubmit={manejarSubmit}
+          manejarCancelar={manejarCancelar}
+          editando={editando}
+        />
       )}
 
       <div className="tabla-responsiva">

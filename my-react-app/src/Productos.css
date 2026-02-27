@@ -98,6 +98,20 @@
   flex: 1 1 0;
 }
 
+.btn-agregar {
+  background: #4caf50 !important;
+}
+
+.btn-agregar:hover {
+  background: #45a049 !important;
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.btn-agregar:active {
+  transform: scale(0.98);
+}
+
 .card-producto button:hover {
   background: linear-gradient(135deg, #f85e2a 0%, #e84c1f 100%);
   transform: scale(1.02);
@@ -119,8 +133,8 @@
 
 /* botón eliminar*/
 .btn-eliminar {
-  background: #d32f2f;
-  color: white;
+  background: #d32f2f !important;
+  color: white !important;
   padding: 12px 20px;
   border-radius: 8px;
   border: none;
@@ -134,7 +148,7 @@
 }
 
 .btn-eliminar:hover {
-  background: #b71c1c;
+  background: #b71c1c !important;
   transform: scale(1.02);
   box-shadow: 0 4px 12px rgba(211, 47, 47, 0.3);
 }

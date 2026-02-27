@@ -8,6 +8,17 @@ function Carrito() {
     importarCartsApi();
   }, []);
 
+  const eliminarProducto = (ordenIndex, productIndex) => {
+    const nuevasOrdenes = [...ordenes];
+    nuevasOrdenes[ordenIndex].products.splice(productIndex, 1);
+    setOrdenes(nuevasOrdenes);
+  };
+
+  const eliminarOrden = (ordenIndex) => {
+    const nuevasOrdenes = ordenes.filter((_, index) => index !== ordenIndex);
+    setOrdenes(nuevasOrdenes);
+  };
+
   const importarCartsApi = async () => {
     try {
       const res = await fetch("https://fakestoreapi.com/carts");
@@ -37,14 +48,26 @@ function Carrito() {
 
             <ul>
               {orden.products.map((prod, i) => (
-                <li key={i}>
+                <li key={i} className="producto-item">
                   Producto #{prod.productId} — Cantidad {prod.quantity}
+                  <button 
+                    className="btn-eliminar-producto"
+                    onClick={() => eliminarProducto(ordenes.indexOf(orden), i)}
+                  >
+                    ×
+                  </button>
                 </li>
               ))}
             </ul>
 
             <button className="btn-comprar">
               Comprar
+            </button>
+            <button 
+              className="btn-eliminar"
+              onClick={() => eliminarOrden(ordenes.indexOf(orden))}
+            >
+              Eliminar
             </button>
 
           </div>

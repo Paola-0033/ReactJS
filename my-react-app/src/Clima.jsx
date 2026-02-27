@@ -27,7 +27,7 @@ function Clima() {
                     clima ? (
                         <>
                         <p>{clima.name} Temp: {clima.main.temp}°C / Hum: {clima.main.humidity}%</p>
-                        <p>Descripcion : {clima.weather.description}</p>
+                       
                         </>
                     ) : (
                         <p>Cargando clima...</p>

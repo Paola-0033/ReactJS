@@ -10,7 +10,7 @@ function Sucursales() {
       telefono: '+52 (55) 3000-0100',
       lat: 25.6866,
       lng: -100.3161,
-      img: 'https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=400&h=300&fit=crop'
+      img: 'https://motormania.com.mx/wp-content/uploads/2022/06/P90468447_lowRes_cever-santa-fe-in-me.jpg'
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ function Sucursales() {
       telefono: '+52 (81) 8888-0100',
       lat: 25.6867,
       lng: -100.3162,
-      img: 'https://images.unsplash.com/photo-1617469767537-b85461a484b7?w=400&h=300&fit=crop'
+      img: 'https://www.jornada.com.mx/ndjsimg/images/jornada/jornadaimg/bmw-motorrad-estrena-agencia-de-grupo-cever-en-santa-fe-7250/6-18-bmw-motorrad-estrena-agencia-de-grupo-cever-en-santa-fe-7250html-p90468457_highres_cever-santa-fe-in-mejpg-6710html-8aa29ad4-dfb4-471b-9c10-8f869eb62168.jpg'
     },
     {
       id: 3,
@@ -28,7 +28,7 @@ function Sucursales() {
       telefono: '+52 (33) 3777-0100',
       lat: 25.6868,
       lng: -100.3163,
-      img: 'https://images.unsplash.com/photo-1611339555312-e607c90352fd?w=400&h=300&fit=crop'
+      img: 'https://www.wbm.cl/multimarca/site/artic/20211011/imag/foto_0000000420211011003415/Sucursales_-_La_Dehesa_-_IMG_-_731x477.jpg'
     }
   ];
 

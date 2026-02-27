@@ -65,6 +65,14 @@
   justify-content: space-between;
 }
 
+.sucursal-mapa-container {
+  width: 100%;
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 .sucursal-info h3 {
   font-size: 1.5rem;
   color: #003da5;
@@ -125,6 +133,20 @@
 .mapa-sucursales h2 {
   margin-bottom: 30px;
   margin-top: 0;
+
+.map-leaflet {
+  width: 100% !important;
+  height: 200px !important;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.map-general {
+  width: 100% !important;
+  height: 400px !important;
+  border-radius: 8px;
+  z-index: 1;
+}
 }
 
 @media (max-width: 768px) {
@@ -143,6 +165,10 @@
 
   .sucursal-info {
     padding: 20px;
+  }
+
+  .sucursal-mapa-container {
+    height: 180px !important;
   }
 
   .mapa-sucursales {

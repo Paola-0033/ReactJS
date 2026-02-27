@@ -29,7 +29,7 @@ function Productos() {
  if(cargando)return<p>Cargando productos...</p>
   return (
     <div className="productos">
-      {/* formulario para registrar nuevos productos */}
+      {/* R  nuevos productos */}
       <Registrarroducto />
    
       <h2>Nuestros Productos</h2>
@@ -45,7 +45,7 @@ function Productos() {
               <button
                 className="btn-eliminar"
                 onClick={() => {
-                  // eliminar producto de la lista local
+                  
                   setProductos((prev) => prev.filter((p) => p.id !== producto.id));
                 }}
               >
